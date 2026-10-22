@@ -6,7 +6,7 @@ logs_file="${logs_folder}/${0}.log"
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-N="\e[0m]"
+N="\e[0m"
 
 
 if [ $user_id -ne 0 ]; then
