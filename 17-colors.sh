@@ -20,10 +20,10 @@ echo "Script started execution at $(date "+%F +%T")" &>> $logs_file
 
 validate(){
     if [ $1 -ne 0 ]; then
-        echo "$2 installation ${R}failed${N}" | tee -a $logs_file
+        echo -e "$2 installation ${R}failed${N}" | tee -a $logs_file
         exit 1
     else
-        echo "$2 installation ${G}success${N}" | tee -a $logs_file    
+        echo -e "$2 installation ${G}success${N}" | tee -a $logs_file    
 
     fi
 }
@@ -35,7 +35,7 @@ do
         dnf install ${package} -y &>> $logs_file
         validate $? ${package}
     else
-        echo "${package} already installed... ${Y}SKIPPING${N}" | tee -a $logs_file   
+        echo -e "${package} already installed... ${Y}SKIPPING${N}" | tee -a $logs_file   
     fi        
 done
 
