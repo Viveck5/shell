@@ -31,8 +31,7 @@ do
         dnf install ${package} -y &>> $logs_file
         validate $? ${package}
     else
-        echo "${package already installed... SKIPPING}" &>> logs_file   
-    
+        echo "${package} already installed... SKIPPING" &>> logs_file      
 done
 
 echo "Installation script execution completed at $(date "+%F +%T")" &>> $logs_file
