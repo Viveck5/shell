@@ -1,7 +1,7 @@
 #!/bin/bash
 
 user_id=$(id -u)
-logs_folder="/var/logs/shell"
+logs_folder="/var/log/shell"
 logs_file="${logs_folder}/${0}.log"
 
 if [ $user_id -ne 0 ]; then
