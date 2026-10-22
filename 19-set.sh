@@ -8,7 +8,7 @@ logs_file="${logs_folder}/${0}"
 
 trap 'echo "Error at $LINENO", command: "$BASH_COMMAND"' ERR
 
-if [ $user_id -ne 0]; then
+if [ $user_id -ne 0 ]; then
     echo "Please run the script with the sudo access."
     exit 1
 fi
