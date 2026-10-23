@@ -13,19 +13,19 @@ usage(){
     exit 1
 }
 
-if [ -z $source_dir ]; then
+if [ -z "$source_dir" ]; then
     echo "ERROR:: Missing parameters"
     usage
 fi    
 
-if [ ! -d $source_dir ]; then
+if [ ! -d "$source_dir" ]; then
     echo -e "${R}ERROR:: $source_dir does not exit${N}"
 fi
 
 echo "Scanning the files older than $days in $source_dir"
 files_to_delete=$(find $source_dir -name "*.log" -type f -mtime +$days)
 
-if [ -z $files_to_delete ]; then
+if [ -z "$files_to_delete" ]; then
     echo "No log files found older than $days"
     exit 0
 fi
