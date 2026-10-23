@@ -37,7 +37,7 @@ if [ -z "$files_to_archive" ]; then
     exit 0
 fi    
 
-time_stamp=$(date +%Y-%M-%D-%H-%M-%S) 
+time_stamp=$(date +%Y-%m-%d-%H-%M-%S) 
 file_name="$dest_dir/logs-$time_tamp.tar.gz"
 tar -czf $file_name $files_to_archive
 
