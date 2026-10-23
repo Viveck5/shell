@@ -10,7 +10,7 @@ dest_dir=$2
 days=${3:-14}
 
 usage(){
-    echo "${R}USAGE:: ${0} [SOURCE_DIR] [DEST_DIR] [days (Optional, default to 14 days)]${N}"
+    echo -e "${R}USAGE:: ${0} [SOURCE_DIR] [DEST_DIR] [days (Optional, default to 14 days)]${N}"
     exit 1
 }
 
