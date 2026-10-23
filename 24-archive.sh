@@ -49,7 +49,7 @@ else
         echo "File deleted: $line"
     done <<< "$files_to_archive"
 
-    fi   
+fi   
 
 
 
