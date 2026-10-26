@@ -2,7 +2,7 @@
 
 disk_usage=$(df _hT | grep -v Filesystem)
 usage_threshold=20
-server_ip=$(curl http://172.31.26.152/latest/meta-data/local-ipv4)
+server_ip=$(curl http://172.31.30.118/latest/meta-data/local-ipv4)
 
 while IFS= read -r line
 do
