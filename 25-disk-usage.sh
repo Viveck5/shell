@@ -1,8 +1,8 @@
 #!bin/bash
 
-disk_usage=%(df _hT | grep -v Filesystem)
+disk_usage=$(df _hT | grep -v Filesystem)
 usage_threshold=20
-server_ip = $(curl http://18.213.2.86/latest/meta-data/local-ipv4)
+server_ip=$(curl http://18.213.2.86/latest/meta-data/local-ipv4)
 
 for IFS= read -r line
 do
